@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
+import {getFetch} from './helpers/getFetch';
+import NavBar from './components/NavBar/NavBar';
+import GreetingContainer from './components/GreetingContainer/GreetingContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Loading from './components/Loading/Loading';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
+
+  const [books, setBooks] = useState([])
+  const [loading, setLoading] = useState(true)   
+  
+  useEffect(() => {
+      getFetch
+      .then(data => { 
+          setBooks(data)     
+      })
+      .catch(err => console.log(err))    
+      .finally(()=> setLoading(false))
+      
+      return () => {
+          console.log('clean')
+      }
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <GreetingContainer greeting = "Best sellers yet to come..." />
+      { loading ? <Loading text="Loading..." /> : <ItemListContainer data={books} /> }
+    </>
   );
 }
 

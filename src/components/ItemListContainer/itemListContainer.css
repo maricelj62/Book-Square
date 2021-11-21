@@ -1,0 +1,5 @@
+.itemListContainer {
+    margin: 10vh 5vw 10vh 5vw;
+    display: flex;
+    justify-content: space-around;
+}
