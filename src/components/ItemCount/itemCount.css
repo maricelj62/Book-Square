@@ -1,0 +1,30 @@
+.itemCountContainer {
+    margin: 5vh;
+    padding: 3vh;
+    text-align: center;
+}
+
+.itemCountContainer__countContainer {
+    margin: 3vh;
+}
+
+.countContainer__btn {
+    margin: 0 0.3vw 0 0.3vw;
+    width: 2vw;
+    border-radius: 8px;
+    background-color: #e63946;
+    color: #e9ecef;
+    font-weight: 600;
+}
+
+.countContainer__text {
+    margin-right: 1vw;
+}
+
+.itemCountContainer__addBtn {
+    width: 10vw;
+    border-radius: 8px;
+    margin-bottom: 1vh;
+    background-color: #2d3142;
+    color: #e9ecef;
+}
