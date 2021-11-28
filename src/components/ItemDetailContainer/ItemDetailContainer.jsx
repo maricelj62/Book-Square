@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
         return () => {
             console.log('clean')
         }
-    },[idProduct])
+    }, [idProduct])
 
     return (
         <section className="itemDetailContainer">

@@ -56,13 +56,13 @@ export const books = [
 
   {
     id: 6,
-    imageURL: 'https://m.media-amazon.com/images/I/41tE9TLddkL.jpg',
+    imageURL: 'https://m.media-amazon.com/images/I/41NwnkCbyoL.jpg',
     category: 'Biographies',
-    name: "The Lyrics: 1956 to the Present",
-    author: "Paul McCartney & Paul Muldoon",
-    price: 57.00,
-    stock: 12,
-    description: "From his early Liverpool days, through the historic decade of The Beatles, to Wings and his long solo career, The Lyrics pairs the definitive texts of 154 Paul McCartney songs with first-person commentaries on his life and music. Spanning two alphabetically arranged volumes, these commentaries reveal how the songs came to be and the people who inspired them: his devoted parents, Mary and Jim; his songwriting partner, John Lennon; his “Golden Earth Girl,” Linda Eastman; his wife, Nancy McCartney; and even Queen Elizabeth, among many others. Here are the origins of “Let It Be,” “Lovely Rita,” “Yesterday,” and “Mull of Kintyre,” as well as McCartney’s literary influences, including Shakespeare, Lewis Carroll, and Alan Durband, his high-school English teacher.",
+    name: "A Promised Land",
+    author: "Barack Obama",
+    price: 13.61,
+    stock: 30,
+    description: "A Promised Land is extraordinarily intimate and introspective—the story of one man’s bet with history, the faith of a community organizer tested on the world stage. Obama is candid about the balancing act of running for office as a Black American, bearing the expectations of a generation buoyed by messages of “hope and change,” and meeting the moral challenges of high-stakes decision-making. He is frank about the forces that opposed him at home and abroad, open about how living in the White House affected his wife and daughters, and unafraid to reveal self-doubt and disappointment. Yet he never wavers from his belief that inside the great, ongoing American experiment, progress is always possible.",
   },
 
   {
@@ -78,28 +78,17 @@ export const books = [
 
   {
     id: 8,
-    imageURL: 'https://m.media-amazon.com/images/I/41NwnkCbyoL.jpg',
+    imageURL: 'https://m.media-amazon.com/images/I/41tE9TLddkL.jpg',
     category: 'Biographies',
-    name: "A Promised Land",
-    author: "Barack Obama",
-    price: 13.61,
-    stock: 30,
-    description: "A Promised Land is extraordinarily intimate and introspective—the story of one man’s bet with history, the faith of a community organizer tested on the world stage. Obama is candid about the balancing act of running for office as a Black American, bearing the expectations of a generation buoyed by messages of “hope and change,” and meeting the moral challenges of high-stakes decision-making. He is frank about the forces that opposed him at home and abroad, open about how living in the White House affected his wife and daughters, and unafraid to reveal self-doubt and disappointment. Yet he never wavers from his belief that inside the great, ongoing American experiment, progress is always possible.",
+    name: "The Lyrics: 1956 to the Present",
+    author: "Paul McCartney & Paul Muldoon",
+    price: 57.00,
+    stock: 12,
+    description: "From his early Liverpool days, through the historic decade of The Beatles, to Wings and his long solo career, The Lyrics pairs the definitive texts of 154 Paul McCartney songs with first-person commentaries on his life and music. Spanning two alphabetically arranged volumes, these commentaries reveal how the songs came to be and the people who inspired them: his devoted parents, Mary and Jim; his songwriting partner, John Lennon; his “Golden Earth Girl,” Linda Eastman; his wife, Nancy McCartney; and even Queen Elizabeth, among many others. Here are the origins of “Let It Be,” “Lovely Rita,” “Yesterday,” and “Mull of Kintyre,” as well as McCartney’s literary influences, including Shakespeare, Lewis Carroll, and Alan Durband, his high-school English teacher.",
   },
 
   {
     id: 9,
-    imageURL: 'https://m.media-amazon.com/images/I/51V9Sk9bCyL.jpg',
-    category: 'Mental health',
-    name: "How to Do the Work",
-    author: "Nicole LePera",
-    price: 14.99,
-    stock: 18,
-    description: "In How to Do the Work, Dr. LePera offers readers the support and tools that will allow them to break free from destructive behaviors to reclaim and recreate their lives. Nothing short of a paradigm shift, this is a celebration of empowerment that will forever change the way we approach mental wellness and self-care.",
-  },
-
-  {
-    id: 10,
     imageURL: 'https://m.media-amazon.com/images/I/51pLyQJpAUL.jpg',
     category: 'Biographies',
     name: "Mahatma Gandhi: A Life From Beginning to End",
@@ -107,6 +96,17 @@ export const books = [
     price: 12.99,
     stock: 9,
     description: "The twentieth century saw the rise of despots and dictators, charlatans and cowards; it witnessed the evolution of weapons so deadly that whole countries could be destroyed; it incubated the rise of political philosophies and religious extremism that sought to eradicate democracy and mock compassion. But amidst all of the violence and hatred, Gandhi remained steadfast to his beliefs, and his beliefs have changed the world.",
+  },
+
+  {
+    id: 10,
+    imageURL: 'https://m.media-amazon.com/images/I/51V9Sk9bCyL.jpg',
+    category: 'Mental health',
+    name: "How to Do the Work",
+    author: "Nicole LePera",
+    price: 14.99,
+    stock: 18,
+    description: "In How to Do the Work, Dr. LePera offers readers the support and tools that will allow them to break free from destructive behaviors to reclaim and recreate their lives. Nothing short of a paradigm shift, this is a celebration of empowerment that will forever change the way we approach mental wellness and self-care.",
   },
 
   {

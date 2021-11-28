@@ -2,3 +2,17 @@
     position: sticky;
     top: 0;
 }
+
+.link, .linkItem {
+    text-decoration: none;
+}
+
+.linkItem {
+    margin: 0 0.5vw 0 0.5vw;
+    color: #afada6;
+    font-weight: 500;
+}
+
+.linkItem:hover {
+    color: #d1cfc7;
+}
