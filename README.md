@@ -27,3 +27,6 @@ Para ejecutar la aplicación, utilizar el siguiente comando:
 (Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser)
 
+
+## Video
+https://drive.google.com/file/d/1FY4C56bJg6jiBNrGLRCIDX5y_adTBjpq/view?usp=sharing
