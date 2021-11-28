@@ -2,12 +2,14 @@ import React from 'react';
 import { useState } from 'react';
 import './itemCount.css';
 
-const ItemCount = ({stock, initial, onAdd, noStock, displayMsg}) => {
+const ItemCount = ({stock, initial, onAdd, displayMsg}) => {
 
     const [count, setCount] = useState(initial);
 
     function sum () {
-        setCount(count + 1);
+        if (stock > count) {
+            setCount(count + 1);
+        }  
     }
 
     function subtract () {
@@ -17,12 +19,8 @@ const ItemCount = ({stock, initial, onAdd, noStock, displayMsg}) => {
     }
 
     function addToCart () {
-        if (stock >= count) {
-            onAdd(count);
-            setCount(1);
-        } else {
-            noStock();
-        }
+        onAdd(count);
+        setCount(1);
     }
 
     return (
@@ -32,8 +30,10 @@ const ItemCount = ({stock, initial, onAdd, noStock, displayMsg}) => {
                 <button className="countContainer__btn" onClick={sum}>+</button>
                 <button className="countContainer__btn" onClick={subtract}>-</button>
             </div>
-            <button className="itemCountContainer__addBtn"onClick={addToCart}>Add to cart</button>
-            <p>{displayMsg}</p>
+            <div className="itemCountContainer__addContainer">
+                <button className="addContainer__addBtn" onClick={addToCart}>Add to cart</button>
+                <p>{displayMsg}</p>
+            </div>  
         </div>
     )
 }

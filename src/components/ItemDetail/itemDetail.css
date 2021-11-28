@@ -1,0 +1,7 @@
+.itemDetail {
+    display: flex;
+}
+
+.itemDetail__imageContainer, .itemDetail__textContainer {
+    margin: 0 3vw 0 3vw;
+}

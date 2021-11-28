@@ -1,25 +1,37 @@
 import React from 'react';
-import ItemList from './ItemList';
-import ItemCount from '../ItemCount/ItemCount';
-import { useState } from 'react';
+import ItemList from '../ItemList/ItemList';
+import Loading from '../Loading/Loading';
+import GreetingContainer from '../GreetingContainer/GreetingContainer';
+import {getFetch} from '../../helpers/getFetch';
+import { useState, useEffect } from 'react';
 import './itemListContainer.css';
 
-const ItemListContainer = (props) => {
-    
-    const [string, setString] = useState('');
+const ItemListContainer = () => {
 
-    function onAdd (qty) {
-        setString(`Added ${qty}`);
-    }
+    const [books, setBooks] = useState([])
+    const [loading, setLoading] = useState(true)
 
-    function noStock () {
-        setString("Sorry! Only 5 units in stock");
-    }
+    useEffect(() => {
+        getFetch
+        .then(data => { 
+            setBooks(data)     
+        })
+        .catch(err => console.log(err))    
+        .finally(()=> setLoading(false))
+        
+        return () => {
+            console.log('clean')
+        }
+    },[])
 
     return (
         <section className="itemListContainer">
-            <ItemList data={props.data} />
-            <ItemCount stock={5} initial={1} onAdd={onAdd} noStock={noStock} displayMsg={string}/>
+            { loading ? <Loading text="Loading..." /> :
+               <> 
+                <GreetingContainer greeting = "Best sellers yet to come..." />
+                <ItemList data={books} />
+               </> 
+            }
         </section>
     )
 }

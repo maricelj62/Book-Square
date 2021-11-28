@@ -1,11 +1,12 @@
 .itemCountContainer {
-    margin: 5vh;
-    padding: 3vh;
-    text-align: center;
+    width: 17vw;
+    margin: 0 2vw 0 2vw;
 }
 
 .itemCountContainer__countContainer {
-    margin: 3vh;
+    display: flex;
+    justify-content: center;
+    margin: 4vh 0 3vh 0;
 }
 
 .countContainer__btn {
@@ -21,7 +22,13 @@
     margin-right: 1vw;
 }
 
-.itemCountContainer__addBtn {
+.itemCountContainer__addContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addContainer__addBtn {
     width: 10vw;
     border-radius: 8px;
     margin-bottom: 1vh;
