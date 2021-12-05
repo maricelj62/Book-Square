@@ -17,20 +17,20 @@ const NavBar = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Link to='/category/Historical novels' className="linkItem">
+                            <Link to='/category/Historical novels' className="itemLink">
                                 Historical novels
                             </Link>
-                            <Link to='/category/Biographies' className="linkItem">
+                            <Link to='/category/Biographies' className="itemLink">
                                 Biographies
                             </Link>
-                            <Link to='/category/Mental health' className="linkItem">
+                            <Link to='/category/Mental health' className="itemLink">
                                 Mental health
                             </Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#cart">
+                            <Link to='/cart' className="cartLink">
                                 <CartWidget />
-                            </Nav.Link>
+                            </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

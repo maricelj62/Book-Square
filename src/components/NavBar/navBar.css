@@ -3,16 +3,24 @@
     top: 0;
 }
 
-.link, .linkItem {
+.link, .itemLink {
     text-decoration: none;
 }
 
-.linkItem {
+.itemLink {
     margin: 0 0.5vw 0 0.5vw;
     color: #afada6;
     font-weight: 500;
 }
 
-.linkItem:hover {
+.itemLink:hover {
     color: #d1cfc7;
+}
+
+.cartLink {
+    color: #d1cfc7;
+}
+
+.cartLink:hover {
+    color: #ebe9e3;
 }

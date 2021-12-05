@@ -1,0 +1,8 @@
+.cartItemContainer {
+    margin-bottom: 15vh;
+}
+
+.deleteBtn {
+    width: 15%;
+    align-self: center;
+}

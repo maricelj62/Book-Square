@@ -1,14 +1,17 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
 import './itemDetail.css';
 
 const ItemDetail = ({item}) => {
 
     const [string, setString] = useState('');
+    const {addProduct} = useContext(CartContext);
 
     function onAdd (qty) {
         setString(`Added ${qty}`);
+        addProduct({ product: item, quantity: qty} );
     }
 
     return (
