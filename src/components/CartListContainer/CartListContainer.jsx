@@ -9,7 +9,7 @@ const CartListContainer = () => {
 
     return (
         <section className="cartListContainer">
-            <button onClick={ () => emptyCart() }>Empty Cart</button>
+            <button className="cartListContainer__emptyBtn" onClick={ () => emptyCart() }>Empty Cart</button>
             {cartList.map(element => 
                 <Cart key={element.product.id} id={element.product.id} image={element.product.imageURL} name={element.product.name} author={element.product.author} price={element.product.price} qty={element.quantity} />
             )}

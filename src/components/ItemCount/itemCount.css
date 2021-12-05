@@ -28,10 +28,18 @@
     align-items: center;
 }
 
-.addContainer__addBtn {
+.addContainer__addBtn, .addContainer__endBtn {
     width: 10vw;
     border-radius: 8px;
     margin-bottom: 1vh;
+}
+
+.addContainer__addBtn {
     background-color: #2d3142;
     color: #e9ecef;
+}
+
+.addContainer__endBtn {
+    background-color: #8597e7;
+    font-weight: 500;
 }

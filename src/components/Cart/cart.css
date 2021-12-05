@@ -5,4 +5,7 @@
 .deleteBtn {
     width: 15%;
     align-self: center;
+    border-radius: 8px;
+    background-color: #2d3142;
+    color: #e9ecef;
 }

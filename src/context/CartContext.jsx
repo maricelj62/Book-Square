@@ -21,12 +21,15 @@ const CartContextProvider = ({children}) => {
     }
 
     const emptyCart = () => {
-        setCartList([]);
+        if (cartList.length > 0) {
+            setCartList([]);
+        }
     }
 
     const deleteItem = (id) => {
-        const index = cartList.findIndex(item => item.product.id);
+        const index = cartList.findIndex(item => item.product.id === id);
         cartList.splice(index, 1);
+        document.getElementById(id).remove();
     }
 
     return (

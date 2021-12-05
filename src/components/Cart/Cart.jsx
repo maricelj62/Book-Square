@@ -6,14 +6,13 @@ import './cart.css';
 const Cart = ({ id, image, name, author, price, qty }) => {
 
     const {deleteItem} = useContext(CartContext);
-
+    
     const removeItem = () => {
         deleteItem(id);
-        document.getElementById("cartItemCard").remove();
     }
 
     return (
-        <article className="cartItemContainer" id="cartItemCard">
+        <article className="cartItemContainer" id={id}>
             <div className="itemContainer__imageContainer">
                 <img className="imageContainer__image" src={image} alt="" />
             </div>
@@ -24,7 +23,7 @@ const Cart = ({ id, image, name, author, price, qty }) => {
                 </div>
                 <p className="textContainer__price">USD {price}</p>
                 <p className="textContainer__price">Quantity {qty}</p>
-                <button onClick={removeItem} className="deleteBtn">Remove</button>
+                <button className="deleteBtn" onClick={removeItem} >Remove</button>
             </div>
         </article>
     )
