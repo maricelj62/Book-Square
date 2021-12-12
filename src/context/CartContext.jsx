@@ -27,23 +27,18 @@ const CartContextProvider = ({children}) => {
             setCartList([]);
         }
         setTotalQty(0);
+        setTotalPrice(0);
     }
 
-    const deleteItem = (id) => {
+    const deleteItem = (id, qty, price) => {
+        setTotalQty(totalQty - qty);
+        setTotalPrice(totalPrice - qty*price);
         const index = cartList.findIndex(item => item.product.id === id);
         cartList.splice(index, 1);
-        document.getElementById(id).remove();
-    }
-
-    const totalResult = () => {
-        const qtyResult = cartList.reduce((total, currentValue) => total = total + currentValue.quantity, 0);
-        setTotalQty(qtyResult);
-        const priceResult = cartList.reduce((total, currentValue) => total = total + currentValue.quantity*currentValue.product.price, 0);
-        setTotalPrice(priceResult);
     }
 
     return (
-        <CartContext.Provider value={{cartList, addProduct, emptyCart, deleteItem, totalResult, totalQty, totalPrice}}>
+        <CartContext.Provider value={{cartList, addProduct, emptyCart, deleteItem, setTotalPrice, totalPrice, setTotalQty, totalQty}}>
             {children}
         </CartContext.Provider>
     )

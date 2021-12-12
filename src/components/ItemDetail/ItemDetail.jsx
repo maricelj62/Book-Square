@@ -8,13 +8,14 @@ import './itemDetail.css';
 const ItemDetail = ({item}) => {
 
     const [string, setString] = useState('');
-    const {addProduct, totalResult} = useContext(CartContext);
     const [itemCountShow, setItemCountShow] = useState(true);
+    const {addProduct, totalQty, setTotalQty, setTotalPrice, totalPrice} = useContext(CartContext);
 
     function onAdd (qty) {
         setString(`Added ${qty}`);
-        addProduct({ product: item, quantity: qty});
-        totalResult();
+        addProduct({ product: item, quantity: qty} );
+        setTotalQty(totalQty + qty);
+        setTotalPrice(totalPrice + item.price*qty);
         setItemCountShow(false);
     }
 
@@ -34,7 +35,7 @@ const ItemDetail = ({item}) => {
                 </div>
             </article>
             {itemCountShow === true ?
-                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} which="itemDetail" />
+                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                 :
                 <div className="itemCountContainer">
                     <div className="itemCountContainer__addContainer">
