@@ -2,16 +2,20 @@ import React from 'react';
 import { useState, useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
+import EndPurchaseButton from '../ItemCount/EndPurchaseButton';
 import './itemDetail.css';
 
 const ItemDetail = ({item}) => {
 
     const [string, setString] = useState('');
-    const {addProduct} = useContext(CartContext);
+    const {addProduct, totalResult} = useContext(CartContext);
+    const [itemCountShow, setItemCountShow] = useState(true);
 
     function onAdd (qty) {
         setString(`Added ${qty}`);
-        addProduct({ product: item, quantity: qty} );
+        addProduct({ product: item, quantity: qty});
+        totalResult();
+        setItemCountShow(false);
     }
 
     return (
@@ -29,7 +33,17 @@ const ItemDetail = ({item}) => {
                     <p>{item.description}</p>
                 </div>
             </article>
-            <ItemCount stock={item.stock} initial={1} onAdd={onAdd} displayMsg={string}/>
+            {itemCountShow === true ?
+                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} which="itemDetail" />
+                :
+                <div className="itemCountContainer">
+                    <div className="itemCountContainer__addContainer">
+                        <EndPurchaseButton />
+                        <p>{string}</p>
+                    </div>
+                </div>
+            }
+            
         </>
     )
 }

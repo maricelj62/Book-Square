@@ -5,20 +5,21 @@ import EndPurchaseButton from './EndPurchaseButton';
 
 const ButtonCount = ({addToCart}) => {
 
-    const [inputType, setInputType] = useState('add');
+    //const [inputType, setInputType] = useState('add');
 
     const handleEvent = () => {
-        setInputType('end');
+        //setInputType('end');
         addToCart();
     }
 
     return (
         <div>
-            {inputType === 'add' ?
+{/*             {inputType === 'add' ?
                 <AddToCartButton handleEvent={handleEvent}/>
                 :
                 <EndPurchaseButton />
-            }
+            } */}
+            <AddToCartButton handleEvent={handleEvent}/>
         </div>
     )
 }

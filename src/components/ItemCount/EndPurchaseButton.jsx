@@ -5,7 +5,7 @@ import './itemCount.css';
 const EndPurchaseButton = () => {
     return (
         <Link to='/cart'>
-            <button className="addContainer__endBtn">End purchase</button>
+            <button className="addContainer__endBtn">Complete purchase</button>
         </Link>
     )
 }
