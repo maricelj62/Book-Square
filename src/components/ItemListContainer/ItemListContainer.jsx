@@ -2,7 +2,7 @@ import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import Loading from '../Loading/Loading';
 import GreetingContainer from '../GreetingContainer/GreetingContainer';
-import {getFetch} from '../../helpers/getFetch';
+import getFirestore from '../Firebase/firebase';
 import { useState, useEffect } from 'react';
 import './itemListContainer.css';
 import { useParams } from 'react-router';
@@ -14,22 +14,25 @@ const ItemListContainer = () => {
     const {idCategory} = useParams()
 
     useEffect(() => {
+        const db = getFirestore()
         if (idCategory) {
-            getFetch
-            .then(data => {
-                setBooks(data.filter(item => item.category === idCategory))
-            })
+            const dbQuery = db.collection('books').where('category', '==', idCategory)
+            dbQuery.get()
+            .then(data => 
+                setBooks( data.docs.map(item => ( {id: item.id, ...item.data()} )) )
+            )
             .catch(err => console.log(err))
             .finally(()=> setLoading(false))
         } else {
-            getFetch
-            .then(data => { 
-                setBooks(data)     
-            })
-            .catch(err => console.log(err))    
+            const dbQuery = db.collection('books')
+            dbQuery.get()
+            .then(data => 
+                setBooks( data.docs.map(item => ( {id: item.id, ...item.data()} )) )
+            )
+            .catch(err => console.log(err))
             .finally(()=> setLoading(false))
         }
-        
+
         return () => {
             console.log('clean')
         }
