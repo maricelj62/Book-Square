@@ -61,4 +61,4 @@ Contiene los campos de entrada en los que el usuario ingresa sus datos y presion
 Provee las funciones para actualizar los productos del carrito (CartList), y también para actualizar las variables de precio total y cantidad de items total de la compra.
 
 ## Demo
-https://drive.google.com/file/d/1FY4C56bJg6jiBNrGLRCIDX5y_adTBjpq/view?usp=sharing
+https://booksquare.netlify.app/
