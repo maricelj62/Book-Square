@@ -1,6 +1,8 @@
 .itemCountContainer {
-    width: 17vw;
     margin: 0 2vw 0 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .itemCountContainer__countContainer {
@@ -10,8 +12,6 @@
 }
 
 .countContainer__btn {
-    margin: 0 0.3vw 0 0.3vw;
-    width: 2vw;
     border-radius: 8px;
     background-color: #e63946;
     color: #e9ecef;
@@ -22,24 +22,69 @@
     margin-right: 1vw;
 }
 
-.itemCountContainer__addContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.addContainer__addBtn, .addContainer__endBtn {
-    width: 10vw;
-    border-radius: 8px;
+.itemCountContainer__addBtn {
     margin-bottom: 1vh;
 }
 
-.addContainer__addBtn {
+.itemCountContainer__addBtn {
     background-color: #2d3142;
     color: #e9ecef;
 }
 
-.addContainer__endBtn {
-    background-color: #8597e7;
-    font-weight: 500;
+
+/*-----------------------
+# Media Queries   
+-------------------------*/
+@media only screen and (max-width:600px) {
+    
+    .itemCountContainer__addBtn {
+        width: 45vw;
+        height: 5vh;
+        border-radius: 10px;
+    }
+
+    .countContainer__btn {
+        width: 7vw;
+        margin: 0 1vw 0 1vw;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    
+    .itemCountContainer__addBtn {
+        width: 28vw;
+        height: 4vh;
+        border-radius: 10px;
+    }
+
+    .countContainer__btn {
+        width: 4vw;
+        margin: 0 0.7vw 0 0.7vw;
+    }
+}
+
+@media only screen and (min-width:992px) {
+
+    .itemCountContainer__addBtn {
+        width: 15vw;
+        height: 5vh;
+        border-radius: 12px;
+    }
+
+    .countContainer__btn {
+        width: 3vw;
+        margin: 0 0.5vw 0 0.5vw;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    
+    .itemCountContainer__addBtn {
+        width: 10vw;
+    }
+
+    .countContainer__btn {
+        width: 2vw;
+        margin: 0 0.3vw 0 0.3vw;
+    }
 }

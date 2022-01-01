@@ -13,21 +13,22 @@ const ItemDetailContainer = () => {
     const { idProduct } = useParams();
 
     useEffect(() => {
-        const db = getFirestore()
-        const dbQuery = db.collection('books').doc(idProduct)
-        dbQuery.get()
-        .then(resp => setBook( {id: resp.id, ...resp.data()} ))
-        .catch(err => console.log(err))    
-        .finally(()=> setLoading(false))
+        const timer = setTimeout(() => {
+            const db = getFirestore()
+            const dbQuery = db.collection('books').doc(idProduct)
+            dbQuery.get()
+            .then(resp => setBook( {id: resp.id, ...resp.data()} ))  
+            .finally(()=> setLoading(false))
+        }, 1000);
 
         return () => {
-            console.log("clean");
+            clearTimeout(timer);
         }
     }, [idProduct])
 
     return (
         <section className="itemDetailContainer">
-            { loading ? <Loading text="Loading..." /> : <ItemDetail item={book}/> }
+            { loading ? <Loading text="Cargando..." /> : <ItemDetail item={book}/> }
         </section>
     )
 }

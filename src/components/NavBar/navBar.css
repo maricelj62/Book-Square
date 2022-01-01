@@ -7,10 +7,15 @@
     text-decoration: none;
 }
 
+.link {
+    font-family: 'Sniglet', cursive;
+}
+
 .itemLink {
     margin: 0 0.5vw 0 0.5vw;
     color: #afada6;
     font-weight: 500;
+    font-family: 'Comfortaa', cursive;
 }
 
 .itemLink:hover {

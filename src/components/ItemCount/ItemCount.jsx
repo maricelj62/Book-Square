@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import ButtonCount from './ButtonCount';
+import AddToCartButton from './AddToCartButton';
 import './itemCount.css';
 
 const ItemCount = ({stock, initial, onAdd}) => {
@@ -28,10 +28,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <div className="itemCountContainer">
             <div className="itemCountContainer__countContainer">
                 <label className="countContainer__text">{count}</label>
-                <ButtonCount addToCart={addToCart} />
                 <button className="countContainer__btn" onClick={sum} >+</button>
                 <button className="countContainer__btn" onClick={subtract} >-</button>
             </div>
+            <AddToCartButton handleEvent={addToCart}/>
         </div>
     )
 }

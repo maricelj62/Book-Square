@@ -5,4 +5,34 @@
 
 body {
   background-color: #e9ecef;
+  font-family: 'Manjari', sans-serif;
+}
+
+p, h2 {
+  margin: 0;
+}
+
+
+/*-----------------------
+# Media Queries   
+-------------------------*/
+@media only screen and (max-width:600px) {
+
+  :root {
+      font-size: 12px;
+  }
+}
+
+@media only screen and (min-width:600px) {
+
+  :root {
+      font-size: 14px;
+  }
+}
+
+@media only screen and (min-width:992px) {
+
+  :root {
+      font-size: 16px;
+  }
 }

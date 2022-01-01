@@ -1,11 +1,145 @@
-.cartItemContainer {
-    margin-bottom: 15vh;
+.cartItemContainer, .cartItemContainer__imageContain {
+    display: flex;
+}
+
+.cartItemContainer__imageContain {
+    flex-direction: column;
+}
+
+.imageContain__image {
+    box-shadow: 10px 15px 20px rgba(34, 99, 212, 0.3);
+}
+
+.title__bookName {
+    color: #0d153f;
+    font-size: 1.6rem;
+    margin-bottom: 1vh;
 }
 
 .deleteBtn {
-    width: 15%;
-    align-self: center;
-    border-radius: 8px;
+    margin-top: 3vh;
     background-color: #2d3142;
     color: #e9ecef;
+}
+
+
+/*-----------------------
+# Media Queries   
+-------------------------*/
+@media only screen and (max-width:600px) {
+
+    .cartItemContainer {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8vh;
+    }
+
+    .cartItemContainer__imageContain, .cartItemContainer__textContainer {
+        width: 70%;
+    }
+
+    .textContainer__info {
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .info__data {
+        margin-top: 3vh;
+    }
+
+    .data__paragraph {
+        margin: 1vh 0 1vh 0;
+    }
+
+    .deleteBtn {
+        border-radius: 10px;
+    }
+
+}
+
+@media only screen and (min-width:600px) {
+
+    .cartItemContainer {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8vh;
+    }
+
+    .cartItemContainer__imageContain {
+        width: 35%;
+    }
+
+    .cartItemContainer__textContainer {
+        width: 60%;
+    }
+
+    .textContainer__info {
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .info__data {
+        margin-top: 3vh;
+    }
+
+    .data__paragraph {
+        margin: 1vh 0 1vh 0;
+    }
+
+    .deleteBtn {
+        height: 4vh;
+        border-radius: 14px;
+    }
+
+}
+
+@media only screen and (min-width:992px) {
+
+    .cartItemContainer {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 15vh;
+    }
+
+    .cartItemContainer__imageContain {
+        width: 20%;
+    }
+
+    .cartItemContainer__textContainer {
+        margin-left: 7vw;
+    }
+
+}
+
+@media only screen and (min-width:1400px) {
+    
+    .cartItemContainer__imageContain {
+        width: 15%;
+    }
+
+    .cartItemContainer__textContainer {
+        width: 70%;
+        margin-left: 5vw;
+    } 
+
+    .textContainer__info {
+        display: flex;
+    }
+
+    .info__title {
+        width: 30%;
+        text-align: left;
+    }
+
+    .info__data {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 3vw;
+    }
+
+    .deleteBtn {
+        border-radius: 12px;
+    }
+
 }

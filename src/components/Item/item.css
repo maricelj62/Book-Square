@@ -1,6 +1,5 @@
 .itemContainer {
-    width: 20vw;
-    margin: 0 1vw 0 1vw;
+    margin-bottom: 2vh; 
 }
 
 .itemContainer__imageContainer {
@@ -9,8 +8,6 @@
 }
 
 .imageContainer__image {
-    height: 50vh;
-    width: auto;
     box-shadow: 10px 15px 20px rgba(34, 99, 212, 0.3);
 }
 
@@ -24,5 +21,46 @@
 }
 
 .description__title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    color: #0d153f;
+}
+
+.description__parr {
+    margin-top: 0.5vh;
+}
+
+.textContainer__price {
+    margin-top: 1.5vh;
+}
+
+
+/*-----------------------
+# Media Queries   
+-------------------------*/
+@media only screen and (max-width:600px) {
+
+    .imageContainer__image {
+        height: 45vh;
+    }
+}
+  
+@media only screen and (min-width:600px) {
+  
+    .imageContainer__image {
+        height: 50vh;
+    }
+}
+
+@media only screen and (min-width:992px) {
+  
+    .imageContainer__image {
+        height: 40vh;
+    }
+}
+
+@media only screen and (min-width:1400px) {
+  
+    .imageContainer__image {
+        height: 50vh; 
+    }
 }

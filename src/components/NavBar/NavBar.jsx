@@ -17,14 +17,14 @@ const NavBar = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Link to='/category/Historical novels' className="itemLink">
-                                Historical novels
+                            <Link to='/category/Novelas históricas' className="itemLink">
+                                Novelas históricas
                             </Link>
-                            <Link to='/category/Biographies' className="itemLink">
-                                Biographies
+                            <Link to='/category/Biografías' className="itemLink">
+                                Biografías
                             </Link>
-                            <Link to='/category/Mental health' className="itemLink">
-                                Mental health
+                            <Link to='/category/Salud mental' className="itemLink">
+                                Salud mental
                             </Link>
                         </Nav>
                         <Nav>

@@ -16,7 +16,7 @@ const Item = ({id, image, name, author, price}) => {
               <h2 className="description__title">{name}</h2>
               <p className="description__parr">{author}</p>
             </div>
-            <p className="textContainer__price">USD {price}</p>
+            <p className="textContainer__price">USD ${price}</p>
           </div>
         </article>
     )

@@ -1,4 +1,31 @@
-.itemDetailContainer {
-    margin: 10vh 5vw 10vw 20vh;
+/*-----------------------
+# Media Queries   
+-------------------------*/
+@media only screen and (max-width:600px) {
 
+    .itemDetailContainer {
+        margin: 12vh 6vh 12vh 6vh;
+    }
+
+}
+
+@media only screen and (min-width:600px) {
+     
+    .itemDetailContainer {
+        margin: 12vh 8vh 12vh 8vh;
+    }
+}
+
+@media only screen and (min-width:992px) {
+
+    .itemDetailContainer {
+        margin: 12vh 10vh 12vh 10vh;
+    } 
+}
+
+@media only screen and (min-width:1200px) {
+    
+    .itemDetailContainer {
+        margin: 12vh 20vh 12vh 20vh;
+    }
 }

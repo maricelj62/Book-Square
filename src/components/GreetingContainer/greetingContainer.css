@@ -1,5 +1,31 @@
-.greetingContainer {
-    margin: 10vh;
+.greetingContainer__title {
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.4rem;
 }
+
+
+/*-----------------------
+# Media Queries   
+-------------------------*/
+@media only screen and (max-width:600px) {
+
+    .greetingContainer {
+      margin: 8vh 5vw 6vh 5vw;
+    }
+}
+  
+  @media only screen and (min-width:600px) {
+
+    .greetingContainer {
+        margin: 8vh 10vh 6vh 10vh;
+    }
+  }
+  
+  @media only screen and (min-width:992px) {
+
+    .greetingContainer {
+        margin: 10vh 10vh 8vh 10vh;
+    }
+  }

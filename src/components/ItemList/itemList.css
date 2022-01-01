@@ -1,5 +1,43 @@
-.itemList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+/*-----------------------
+# Media Queries   
+-------------------------*/
+@media only screen and (max-width:600px) {
+    
+    .itemList {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+    }
+}
+
+@media only screen and (min-width:600px) {
+
+    .itemList {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width:992px) {
+
+    .itemList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    .itemList {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width:1400px) {
+
+    .itemList {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

@@ -14,6 +14,7 @@ const ItemListContainer = () => {
     const {idCategory} = useParams()
 
     useEffect(() => {
+        const timer = setTimeout(() => {
         const db = getFirestore()
         if (idCategory) {
             const dbQuery = db.collection('books').where('category', '==', idCategory)
@@ -21,7 +22,6 @@ const ItemListContainer = () => {
             .then(data => 
                 setBooks( data.docs.map(item => ( {id: item.id, ...item.data()} )) )
             )
-            .catch(err => console.log(err))
             .finally(()=> setLoading(false))
         } else {
             const dbQuery = db.collection('books')
@@ -29,18 +29,18 @@ const ItemListContainer = () => {
             .then(data => 
                 setBooks( data.docs.map(item => ( {id: item.id, ...item.data()} )) )
             )
-            .catch(err => console.log(err))
             .finally(()=> setLoading(false))
         }
+        }, 1000);
 
         return () => {
-            console.log('clean')
+           clearTimeout(timer);
         }
     }, [idCategory])
 
     return (
         <section className="itemListContainer">
-            { loading ? <Loading text="Loading..." /> :
+            { loading ? <Loading text="Cargando..." /> :
                 idCategory ? 
                     <>  
                         <GreetingContainer greeting = {idCategory} />
@@ -48,7 +48,7 @@ const ItemListContainer = () => {
                     </>
                     :
                     <> 
-                        <GreetingContainer greeting = "Best sellers yet to come..." />
+                        <GreetingContainer greeting = "Destacados" />
                         <ItemList data={books} />
                     </>
             }

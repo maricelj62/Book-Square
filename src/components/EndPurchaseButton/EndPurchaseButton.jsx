@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './itemCount.css';
+import './endPurchaseButton.css';
 
 const EndPurchaseButton = () => {
     return (
         <Link to='/cart'>
-            <button className="addContainer__endBtn">Complete purchase</button>
+            <button className="endPurchaseContainer__endBtn">Terminar compra</button>
         </Link>
     )
 }

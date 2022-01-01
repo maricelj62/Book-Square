@@ -3,8 +3,8 @@ import './itemCount.css';
 
 const AddToCartButton = ({handleEvent}) => {
     return (
-        <button className="addContainer__addBtn" onClick={handleEvent}>
-            Add to cart
+        <button className="itemCountContainer__addBtn" onClick={handleEvent}>
+            Agregar al carrito
         </button>
     )
 }

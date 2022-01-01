@@ -1,0 +1,45 @@
+.endPurchaseContainer__endBtn {
+    width: 10vw;
+    border-radius: 8px;
+    margin-bottom: 2vh;
+    background-color: #8597e7;
+    font-weight: 600;
+}
+
+
+/*-----------------------
+# Media Queries   
+-------------------------*/
+@media only screen and (max-width:600px) {
+    
+    .endPurchaseContainer__endBtn {
+        width: 45vw;
+        height: 5vh;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (min-width:600px) {
+
+    .endPurchaseContainer__endBtn {
+        width: 30vw;
+        height: 4vh;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    
+    .endPurchaseContainer__endBtn {
+        width: 15vw;
+        height: 5vh;
+        border-radius: 12px;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    
+    .endPurchaseContainer__endBtn {
+        width: 10vw;
+    }
+}

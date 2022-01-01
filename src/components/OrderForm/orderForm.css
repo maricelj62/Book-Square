@@ -1,0 +1,144 @@
+.formContainer {
+    margin: 12vh 5vw 10vh 5vw;
+}
+
+.formContainer__title  {
+    text-align: center;
+    margin: 0 10vw 5vh 10vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.3rem;
+}
+
+.formContainer__dataRecord {
+    display: flex;
+    justify-content: center;
+}
+
+.dataRecord__inputSet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #838797;
+    background-color: #eff1f3;;
+}
+
+.inputSet__entry {
+    border: 1px solid #b8bbc5;
+}
+
+.inputSet__btn {
+    margin-top: 2vh;
+    background-color: #e63946;
+    color: #e9ecef;
+    font-weight: 600;
+}
+
+.inputSet__orderIdText {
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.inputSet__noSubmitText {
+    display: none;
+}
+
+
+/*-----------------------
+# Media Queries   
+-------------------------*/
+@media only screen and (max-width:600px) {
+
+    .dataRecord__inputSet {
+        width: 85%;
+        border-radius: 2.5rem;
+        padding: 10vh 7vw 10vh 7vw;
+    }
+
+    .inputSet__entry {
+        width: 95%;
+        height: 5vh;
+        margin-bottom: 4vh;
+        border-radius: 10px;
+    }
+
+    .inputSet__btn {
+        width: 40vw;
+        height: 5vh;
+        border-radius: 12px;
+    }
+}
+
+@media only screen and (min-width:600px) {
+
+    .dataRecord__inputSet {
+        width: 80%;
+        border-radius: 5rem;
+        padding: 10vh
+    }
+
+    .inputSet__entry {
+        width: 95%;
+        height: 5vh;
+        margin-bottom: 4vh;
+        border-radius: 14px;
+    }
+
+    .inputSet__btn {
+        width: 20vw;
+        height: 5vh;
+        border-radius: 18px;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    
+    .dataRecord__inputSet {
+        width: 50%;
+        border-radius: 3rem;
+    }
+
+    .inputSet__entry {
+        width: 75%;
+        border-radius: 8px;
+    }
+
+    .inputSet__btn {
+        width: 15vw;
+        border-radius: 16px;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    .dataRecord__inputSet {
+        border-radius: 3.5rem;
+    }
+    
+    .inputSet__entry {
+        width: 70%;
+        border-radius: 12px;
+    }
+
+    .inputSet__btn {
+        width: 12vw;
+        border-radius: 14px;
+    }
+}
+
+@media only screen and (min-width:1400px) {
+
+    .dataRecord__inputSet {
+        width: 45%;
+    }
+
+    .inputSet__entry {
+        width: 60%;
+        margin-bottom: 4vh;
+        border-radius: 8px;
+    }
+
+    .inputSet__btn {
+        width: 10vw;
+    }
+}
